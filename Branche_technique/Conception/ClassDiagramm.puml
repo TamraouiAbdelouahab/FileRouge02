@@ -1,0 +1,41 @@
+@startuml
+
+left to right direction
+
+class Responsable {
+    +id: Int
+    +name: String
+    +email: String
+    +password: String
+    +created_at: timestamp
+    +updated_at: timestamp
+}
+class Stagiaire {
+    +id: Int
+    +name: String
+    +email: String
+    +password: String
+    +created_at: timestamp
+    +updated_at: timestamp
+}
+
+class Justificatif {
+    +id: Int
+    +ImageURL: String
+    +filingDate: date
+    +Reason: date
+    +created_at: timestamp
+    +updated_at: timestamp
+}
+class Absence {
+    +id: Int
+    +Date: date
+    +created_at: timestamp
+    +updated_at: timestamp
+}
+
+
+Responsable "1" -- "*" Justificatif : Ajouter
+Stagiaire "0..*" -- "1" Absence : Est associé à
+Justificatif "0..*" -- "1" Absence  : Est associé à
+@enduml

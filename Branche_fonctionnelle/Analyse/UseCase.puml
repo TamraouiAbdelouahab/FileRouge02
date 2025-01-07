@@ -1,0 +1,17 @@
+@startuml
+left to right direction
+
+actor Responsable
+
+
+rectangle Pkg_Gestion_absence {
+  usecase "Gérer les justifications" as UC1
+  usecase "Consulter les statistiques" as UC2
+}
+
+Responsable -- UC1
+Responsable -- UC2
+
+
+
+@enduml

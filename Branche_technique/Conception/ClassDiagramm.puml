@@ -38,4 +38,5 @@ class Absence {
 Responsable "1" -- "*" Justificatif : Ajouter
 Stagiaire "0..*" -- "1" Absence : Est associé à
 Justificatif "0..*" -- "1" Absence  : Est associé à
+
 @enduml

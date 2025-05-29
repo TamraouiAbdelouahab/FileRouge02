@@ -1,0 +1,25 @@
+@startuml
+left to right direction
+
+actor Responsable
+
+
+rectangle "Sprint 1 - Tableau de bord" {
+  usecase "Afficher les statistiques des justificatifs" as UC1
+  usecase "filtrer par date" as UC2
+  usecase "Voir le top 5 des stagiaires" as UC3
+  usecase "Afficher la liste des justificatifs récents" as UC4
+  usecase "Total de justificatifs" as UC5
+  usecase "Total de justificatifs en attente" as UC6
+  usecase "Total de justificatifs Acceptés" as UC7
+}
+
+Responsable -- UC1
+Responsable -- UC2
+Responsable -- UC3
+Responsable -- UC4
+UC1 <.-- UC5 : <extend>
+UC1 <.-- UC6 : <extend>
+UC1 <.-- UC7 : <extend>
+
+@enduml

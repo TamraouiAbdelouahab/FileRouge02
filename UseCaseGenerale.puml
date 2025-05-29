@@ -1,0 +1,17 @@
+@startuml
+left to right direction
+
+actor surveillant_generale as "Surveillant générale"
+
+
+rectangle "Pkg justification d'absence" {
+  usecase "Gérer les justifications" as UC1
+  usecase "consulter les statistiques" as UC2
+  usecase "Traiter les justificatifs" as UC3
+}
+
+surveillant_generale -- UC1
+surveillant_generale -- UC2
+surveillant_generale -- UC3 
+
+@enduml

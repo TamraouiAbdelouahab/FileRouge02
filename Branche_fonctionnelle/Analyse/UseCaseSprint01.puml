@@ -1,0 +1,26 @@
+@startuml
+left to right direction
+
+actor Surveillant as "Surveillant général"
+
+
+rectangle "Sprint 1 - Tableau de bord" {
+  usecase "Afficher les statistiques des justifications" as UC1
+  usecase "Afficher les analyses des justifications" as UC2
+  usecase "Voir le top 5 des stagiaires" as UC3
+  usecase "Afficher la liste des justifications récentes" as UC4
+  usecase "Afficher le total des justifications" as UC5
+  usecase "Afficher le total des justifications en attente" as UC6
+  usecase "Afficher le total des justifications acceptées" as UC7
+}
+
+Surveillant -- UC1
+Surveillant -- UC2
+Surveillant -- UC3
+Surveillant -- UC4
+UC1 <.-- UC5 : <extend>
+UC1 <.-- UC6 : <extend>
+UC1 <.-- UC7 : <extend>
+
+
+@enduml

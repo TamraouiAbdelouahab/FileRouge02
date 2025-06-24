@@ -1,0 +1,30 @@
+@startuml
+left to right direction
+
+actor surveillant_generale as "Surveillant général"
+actor apprenant as "Apprenant"
+
+rectangle "Sprint 2 - gérer les justifications" {
+  usecase "Consulter les justificatifs reçus" as UC1
+  usecase "Ajouter un justification" as UC2
+  usecase "Afficher les détails d'un justification" as UC3
+  usecase "Accepter,rejeter un justification" as UC4
+  usecase "Modifier un justification" as UC5
+  usecase "Statut = EN_ATTENTE" as UC6
+  usecase "filrer par statut,date" as UC7
+  usecase "filrer par apprenant" as UC8
+}
+
+surveillant_generale -- UC1
+surveillant_generale -- UC2
+surveillant_generale -- UC3
+surveillant_generale -- UC4
+surveillant_generale -- UC7
+surveillant_generale -- UC8
+apprenant -- UC2
+apprenant -- UC5
+apprenant -- UC7
+
+UC5 .-> UC6 : <<extend>>
+
+@enduml
